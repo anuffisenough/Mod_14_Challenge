@@ -28,7 +28,9 @@ BlogPost.init(
             allowNull: false,
         },
         date_created: {
-//need to timestamp when created
+            allowNull: false,
+            type: sequelize.DATE,
+            defaultValue: sequelize.fn('NOW'),
         },
     },
     {

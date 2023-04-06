@@ -24,7 +24,9 @@ Comment.init(
             allowNull: false,
         },
         date_created: {
-//needs to timestamp when created
+            allowNull: false,
+            type: sequelize.DATE,
+            defaultValue: sequelize.fn('NOW'),
         },
     },
     {
